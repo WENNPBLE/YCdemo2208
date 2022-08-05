@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script>
+
+
+    function check(){
+        var totaal = 0;
+        var invoer = document.getElementById("invoer").value;
+        console.log(invoer);
+
+        for (var i = 0; i < invoer.length; i++ ){
+        if(invoer.charAt(i)== "e"){
+            totaal++;
+        }    
+        console.log(invoer.charAt(i));    
+
+        }
+        document.getElementById("aantal").innerHTML="Het totaal is "+totaal
+        console.log(totaal);
+    }
+   </script> 
+</head>
+<body>
+    <input type="text" id="invoer"/>
+    <input type="button" value="klik hier" onclick="check()"/>
+    <div id="aantal"></div>
+    
+</body>
+</html>

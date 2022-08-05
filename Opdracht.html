@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function leeftijdscheck(){
+            var invoer = document.getElementById("leeftijd").value;
+            document.getElementById("invoer").innerHTML = "De ingevoerde leeftijd is:" +invoer;
+
+            if(invoer <16){
+                alert ("nog even wachten");
+            }else if (invoer <18 && invoer >=16  ){
+                alert ("biertje of wijntje is prima");
+            }else {
+                alert("proost");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="leeftijd"/>
+    <br>
+    <input type="button" value="Bevestig" onclick="leeftijdscheck()"/>
+    <br>
+    <div id="invoer"></div>
+</body>
+</html>
