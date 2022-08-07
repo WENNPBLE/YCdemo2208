@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    var seasonsPassed = 0;
+    function imageChangeA(Button) {
+        seasonsPassed++;
+        var currentSeason = seasonsPassed % 4;
+
+        if (currentSeason == 0) {
+            document.getElementById("imageA").src = "/images/spring.jpg";
+            document.getElementById("imageB").src = "/images/lambs.jpg";
+        } else if (currentSeason == 1) {
+            document.getElementById("imageA").src = "/images/summer.jpg";
+            document.getElementById("imageB").src = "/images/questionmark.jpg";
+        } else if (currentSeason == 2) {
+            document.getElementById("imageA").src = "/images/autumn.jpg";
+        } else if (currentSeason == 3) {
+            document.getElementById("imageA").src = "/images/winter.jpg";
+        }
+
+    }
+
+
+</script>
+
+<body>
+
+
+    <img id="imageA" src="/images/summer.jpg" style="width: 500px" />
+    <img id="imageB" src="/images/questionmark.jpg" style="width: 500px" />
+
+    <br>
+
+    <input type="button" value="Change Season" onclick="imageChangeA()" />
+
+</body>
+
+</html>
