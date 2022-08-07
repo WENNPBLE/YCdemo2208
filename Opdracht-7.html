@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    var seasonsPassedA = 0;
+    var seasonsPassedB = 0;
+    function imageChangeA(Button) {
+        seasonsPassedA++;
+        var currentSeason = seasonsPassedA % 4;
+
+        if (currentSeason == 0) {
+            document.getElementById("imageA").src = "/images/spring.jpg";
+        } else if (currentSeason == 1) {
+            document.getElementById("imageA").src = "/images/summer.jpg";
+        } else if (currentSeason == 2) {
+            document.getElementById("imageA").src = "/images/autumn.jpg";
+        } else if (currentSeason == 3) {
+            document.getElementById("imageA").src = "/images/winter.jpg";
+        }
+
+    }
+
+    function imageChangeB(Button) {
+        seasonsPassedB++;
+        var currentSeason = seasonsPassedB % 4;
+
+        if (currentSeason == 0) {
+            document.getElementById("imageB").src = "/images/spring.jpg";
+        } else if (currentSeason == 1) {
+            document.getElementById("imageB").src = "/images/summer.jpg";
+        } else if (currentSeason == 2) {
+            document.getElementById("imageB").src = "/images/autumn.jpg";
+        } else if (currentSeason == 3) {
+            document.getElementById("imageB").src = "/images/winter.jpg";
+        }
+
+    }
+
+    function imageCompare() {
+        if (document.getElementById("imageA").src == document.getElementById("imageB").src) {
+            console.log("HETZELFDE");
+            document.getElementById("comparison").innerHTML = "De afbeeldingen zijn hetzelfde";
+        } else {
+            console.log("NIET HETZELFDE");
+            document.getElementById("comparison").innerHTML = "De afbeeldingen zijn niet hetzelfde";
+        }
+
+
+    }
+
+
+</script>
+
+<body>
+    <img id="imageA" src="/images/spring.jpg" style="width: 500px" />
+    <img id="imageB" src="/images/spring.jpg" style="width: 500px" />
+
+    <br>
+
+    <input type="button" value="Next A" onclick="imageChangeA()" />
+    <input type="button" value="Next B" onclick="imageChangeB()" />
+    <input type="button" value="Compare" onclick="imageCompare()" />
+
+    <div id="comparison"></div>
+
+
+</body>
+
+</html>
