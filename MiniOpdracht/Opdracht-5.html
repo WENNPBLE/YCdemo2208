@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var output = "";
+        var count = { A: 0, B: 0, C: 0, D: 0 };
+        function button(Button) {
+            output = output + "U heeft op knop " + Button + " geklikt.";
+            document.getElementById("output").innerHTML = output;
+            if (count[Button] != 0) {
+                alert("U heeft al een keer op " + Button + " geklikt.");
+            }
+
+            count[Button]++;
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="A" onclick="button('A')" />
+    <input type="button" value="B" onclick="button('B')" />
+    <input type="button" value="C" onclick="button('C')" />
+    <input type="button" value="D" onclick="button('D')" />
+    <div id="output"></div>
+</body>
+
+</html>

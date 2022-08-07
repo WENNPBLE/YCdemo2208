@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    var seasonsPassed = 0;
+    function imageChange(Button) {
+        seasonsPassed++;
+
+        var currentSeason = seasonsPassed % 4;
+
+        if (currentSeason == 0) {
+            document.getElementById("image").src = "/images/spring.jpg";
+        } else if (currentSeason == 1) {
+            document.getElementById("image").src = "/images/summer.jpg";
+        } else if (currentSeason == 2) {
+            document.getElementById("image").src = "/images/autumn.jpg";
+        } else if (currentSeason == 3) {
+            document.getElementById("image").src = "/images/winter.jpg";
+        }
+
+        years = parseInt(seasonsPassed / 4);
+        document.getElementById("output").innerHTML = "Er is " + years + " jaar voorbij."
+    }
+
+</script>
+
+<body>
+
+    <img id="image" src="/images/spring.jpg" style="width: 500px" />
+    <div id="output"></div>
+
+    <br>
+
+    <input type="button" value="klik hier" onclick="imageChange()" />
+
+
+</body>
+
+</html>
